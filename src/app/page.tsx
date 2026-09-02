@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import './worldflight.css';
+import EmailSignup from '@/components/EmailSignup';
 
 export default function Home() {
   useEffect(() => {
@@ -167,18 +168,7 @@ export default function Home() {
               Join the waitlist. Early members get<br />
               <strong>one month free</strong> + founding member pricing.
             </p>
-            <form id="waitlist" className="wf-signup" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="your@email.com"
-                aria-label="Email address"
-                required
-                className="wf-input"
-              />
-              <button type="submit" className="wf-cta">
-                Join Waitlist
-              </button>
-            </form>
+            <EmailSignup />
             <p className="wf-fine">Opening Q1 2027 · Bangpho, MRT Blue Line</p>
           </div>
         </div>

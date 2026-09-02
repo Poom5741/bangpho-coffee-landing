@@ -13,7 +13,8 @@ export default function EmailSignup() {
     setMessage('');
 
     try {
-      const response = await fetch('/api/signup', {
+      // Use Cloudflare Worker endpoint
+      const response = await fetch('https://signup-api.poom-a1d.workers.dev', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,15 +26,15 @@ export default function EmailSignup() {
 
       if (response.ok) {
         setStatus('success');
-        setMessage(data.message || 'Thanks for signing up!');
+        setMessage(data.message || 'Thanks! You\'re on the list.');
         setEmail('');
       } else {
         setStatus('error');
-        setMessage(data.error || 'Something went wrong');
+        setMessage(data.error || 'Something went wrong. Please try again.');
       }
     } catch (error) {
       setStatus('error');
-      setMessage('Failed to connect to server');
+      setMessage('Failed to connect. Please try again later.');
     }
   };
 
