@@ -16,21 +16,21 @@
 
 /* ---------------------------------------------------------------- tokens -- */
 :root {
-  /* --- colour roles. Override these six and the page is rebranded. -------- */
-  --sc-canvas:      #08090b;   /* the page ground. Drift interpolates this.   */
-  --sc-surface:     #101217;   /* anything raised off the ground             */
-  --sc-ink:         #f4f2ef;   /* primary text                               */
-  --sc-ink-soft:    #9a9ba1;   /* secondary text. Tinted, never flat gray.   */
-  --sc-accent:      #d8ff3e;   /* ONE accent. It owns a region, not confetti. */
-  --sc-accent-ink:  #08090b;   /* text that sits on the accent               */
+  /* --- colour roles. Coffee-beer brand override. -------------------------- */
+  --sc-canvas:      #1a1410;   /* warm dark brown — the page ground            */
+  --sc-surface:     #2a2018;   /* anything raised off the ground               */
+  --sc-ink:         #f5e6d3;   /* cream text                                   */
+  --sc-ink-soft:    #a2968a;   /* secondary text, warm tint                    */
+  --sc-accent:      #d4a017;   /* craft beer gold — ONE accent                 */
+  --sc-accent-ink:  #1a1410;   /* text that sits on the accent                 */
 
   --sc-hairline:    color-mix(in oklab, var(--sc-ink) 12%, transparent);
   --sc-hairline-strong: color-mix(in oklab, var(--sc-ink) 22%, transparent);
 
-  /* --- type. Two families max. Display carries voice, text carries prose. - */
-  --sc-font-display: "Instrument Sans", "Geist", system-ui, sans-serif;
-  --sc-font-text:    "Geist", system-ui, sans-serif;
-  --sc-font-mono:    "Geist Mono", ui-monospace, monospace;
+  /* --- type. Montserrat display + Open Sans body — coffee-beer brand. ---- */
+  --sc-font-display: "Montserrat", system-ui, sans-serif;
+  --sc-font-text:    "Open Sans", system-ui, sans-serif;
+  --sc-font-mono:    ui-monospace, monospace;
 
   /* Fluid ramp. Tracking tightens as size grows because a face set at 6rem
      with 0 tracking reads loose; this is optical correction, not decoration. */
