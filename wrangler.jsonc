@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bangpho-coffee-landing",
+  "compatibility_date": "2024-01-01",
+  "pages_build_output_dir": ".next",
+  "framework": {
+    "build_command": "npm run build",
+    "output_dir": ".next"
+  }
+}
